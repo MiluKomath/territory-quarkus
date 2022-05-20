@@ -59,7 +59,15 @@ public class TerritoryResourse {
 			throw new NotFoundException();
 		}
 		territoryEntity1.name = territoryEntity.name;
+		territoryEntity1.shortName = territoryEntity.shortName;
+		territoryEntity1.code = territoryEntity.code;
+		territoryEntity1.details = territoryEntity.details;
+		territoryEntity1.notes = territoryEntity.notes;
+		territoryEntity1.organizationId = territoryEntity.organizationId;
+		territoryEntity1.createdAt= territoryEntity.createdAt;
+		territoryEntity1.createdBy = territoryEntity.createdBy;
 		return territoryEntity1;
+
 	}
 
 }
