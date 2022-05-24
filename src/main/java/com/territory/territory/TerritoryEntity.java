@@ -1,4 +1,4 @@
-package com.territory;
+package com.territory.territory;
 
 
 import javax.persistence.Entity;

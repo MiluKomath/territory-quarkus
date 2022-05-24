@@ -1,4 +1,4 @@
-package com.territory;
+package com.territory.territory;
 
 import java.net.URI;
 
@@ -14,6 +14,8 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+
+import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
 
 @Path("/territories")
 public class TerritoryResourse {
@@ -64,7 +66,7 @@ public class TerritoryResourse {
 		territoryEntity1.details = territoryEntity.details;
 		territoryEntity1.notes = territoryEntity.notes;
 		territoryEntity1.organizationId = territoryEntity.organizationId;
-		territoryEntity1.createdAt= territoryEntity.createdAt;
+		territoryEntity1.createdAt = territoryEntity.createdAt;
 		territoryEntity1.createdBy = territoryEntity.createdBy;
 		return territoryEntity1;
 
