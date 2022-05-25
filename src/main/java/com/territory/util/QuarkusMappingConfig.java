@@ -1,4 +1,4 @@
-package com.territory.territory.util;
+package com.territory.util;
 
 import org.mapstruct.MapperConfig;
 

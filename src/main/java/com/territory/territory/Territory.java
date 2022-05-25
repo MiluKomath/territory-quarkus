@@ -24,3 +24,8 @@ public class Territory {
 	private Timestamp updatedAt;
 
 }
+
+
+
+
+ 

@@ -4,7 +4,7 @@ import org.mapstruct.Mapper;
 
 import java.util.List;
 
-import com.territory.territory.util.QuarkusMappingConfig;
+import com.territory.util.QuarkusMappingConfig;
 
 @Mapper(config = QuarkusMappingConfig.class)
 public interface TerritoryTransformer {
