@@ -16,8 +16,6 @@ public class TerritoryEntity extends PanacheEntity {
 	public String code;
 	public String name;
 	public String shortName;
-	public Boolean status;
-	public String designation;
 	public String details;
 	public String notes;
 	public String createdBy;

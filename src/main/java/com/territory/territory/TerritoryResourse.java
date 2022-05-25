@@ -19,7 +19,6 @@ import java.util.Objects;
 import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 
 @Path("/territories")
-@Tag(name = "Territories")
 public class TerritoryResourse {
 	@Inject
 	TerritoryTransformer territoryTransformer;
@@ -86,15 +85,13 @@ public class TerritoryResourse {
 			if (Objects.nonNull(territory.getShortName())) {
 				territoryEntity.shortName = territory.getShortName();
 			}
-			if (Objects.nonNull(territory.getDesignation())) {
-				territoryEntity.designation = territory.getDesignation();
+			if (Objects.nonNull(territory.getDetails())) {
+				territoryEntity.details = territory.getDetails();
 			}
 			if (Objects.nonNull(territory.getNotes())) {
 				territoryEntity.notes = territory.getNotes();
 			}
-			if (Objects.nonNull(territory.getStatus())) {
-				territoryEntity.status = territory.getStatus();
-			}
+			
 			if (Objects.nonNull(territory.getCreatedBy())) {
 				territoryEntity.createdBy = territory.getCreatedBy();
 			}

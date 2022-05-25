@@ -15,9 +15,8 @@ public class Territory {
 	private String code;
 	private String name;
 	private String shortName;
-	private String designation;
+	private String details;
 	private String notes;
-	private Boolean status;
 	private String createdBy;
 	private String updatedBy;
 	private Timestamp createdAt;
