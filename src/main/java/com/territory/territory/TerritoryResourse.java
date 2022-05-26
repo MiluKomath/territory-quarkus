@@ -15,6 +15,8 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
+
+
 import java.util.Objects;
 import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 
@@ -45,6 +47,13 @@ public class TerritoryResourse {
 	public Response getTerritoryById(@PathParam("id") Long id) {
 		return Response.ok(territoryTransformer.toResource(TerritoryEntity.findById(id))).build();
 	}
+//	@GET
+//	@Path("/{id}")
+//	@Produces(MediaType.APPLICATION_JSON)
+//	public Response getTerritoryById(@PathParam("id") Long id) {
+//		TerritoryEntity territoryEntity = TerritoryEntity.findById(id);
+//		return Response.ok(territoryTransformer.toResource(territoryEntity)).build();
+//	}
 
 	@DELETE
 	@Path("/{id}")
@@ -75,39 +84,37 @@ public class TerritoryResourse {
 //		territoryEntity1.createdBy = territoryEntity.createdBy;
 		if (Objects.nonNull(territory.getOrganization())) {
 			territoryEntity.organization = territory.getOrganization();
-		    }
-			if (Objects.nonNull(territory.getCode())) {
-				territoryEntity.code = territory.getCode();
-			}
-			if (Objects.nonNull(territory.getName())) {
-				territoryEntity.name = territory.getName();
-			}
-			if (Objects.nonNull(territory.getShortName())) {
-				territoryEntity.shortName = territory.getShortName();
-			}
-			if (Objects.nonNull(territory.getDetails())) {
-				territoryEntity.details = territory.getDetails();
-			}
-			if (Objects.nonNull(territory.getNotes())) {
-				territoryEntity.notes = territory.getNotes();
-			}
-			
-			if (Objects.nonNull(territory.getCreatedBy())) {
-				territoryEntity.createdBy = territory.getCreatedBy();
-			}
-			if (Objects.nonNull(territory.getUpdatedBy())) {
-				territoryEntity.updatedBy = territory.getUpdatedBy();
-			}
-			if (Objects.nonNull(territory.getCreatedAt())) {
-				territoryEntity.createdAt = territory.getCreatedAt();
-			}
-			if (Objects.nonNull(territory.getUpdatedAt())) {
-				territoryEntity.updatedAt = territory.getUpdatedAt();
-			}
-			return Response.noContent().build();
-
-		
 		}
+		if (Objects.nonNull(territory.getCode())) {
+			territoryEntity.code = territory.getCode();
+		}
+		if (Objects.nonNull(territory.getName())) {
+			territoryEntity.name = territory.getName();
+		}
+		if (Objects.nonNull(territory.getShortName())) {
+			territoryEntity.shortName = territory.getShortName();
+		}
+		if (Objects.nonNull(territory.getDetails())) {
+			territoryEntity.details = territory.getDetails();
+		}
+		if (Objects.nonNull(territory.getNotes())) {
+			territoryEntity.notes = territory.getNotes();
+		}
+
+		if (Objects.nonNull(territory.getCreatedBy())) {
+			territoryEntity.createdBy = territory.getCreatedBy();
+		}
+		if (Objects.nonNull(territory.getUpdatedBy())) {
+			territoryEntity.updatedBy = territory.getUpdatedBy();
+		}
+		if (Objects.nonNull(territory.getCreatedAt())) {
+			territoryEntity.createdAt = territory.getCreatedAt();
+		}
+		if (Objects.nonNull(territory.getUpdatedAt())) {
+			territoryEntity.updatedAt = territory.getUpdatedAt();
+		}
+		return Response.noContent().build();
 
 	}
 
+}
